@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammad Umer — Graphic Designer</title>
+  <meta name="description" content="Portfolio of Mohammad Umer Siddiqui — Graphic Designer specializing in logos, social media posts, thumbnails, banners & posters."/>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <style>
+    :root{
+      --bg:#0f0f12;            /* charcoal */
+      --card:#15161b;          /* deep slate */
+      --text:#f5f7fb;          /* off-white */
+      --muted:#a7b0c0;         /* soft gray */
+      --brand:#7c5cff;         /* violet */
+      --accent:#00d1b2;        /* teal */
+      --pop:#ffd166;           /* warm yellow */
+      --danger:#ff6b6b;        /* coral */
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+      --radius: 24px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;scroll-behavior:smooth}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .container{width:min(1100px,92%);margin-inline:auto}
+    header.nav{
+      position:sticky;top:0;z-index:50;background:rgba(15,15,18,.65);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.5px}
+    .logo-badge{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo-badge span{font-weight:800}
+    .nav a{opacity:.9}
+    .nav-menu{display:flex;gap:24px}
+    .btn{padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);display:inline-flex;align-items:center;gap:10px}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));border:none;box-shadow:0 10px 24px rgba(124,92,255,.25)}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero .container{padding:64px 0 36px}
+    .grid-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+    .kicker{color:var(--accent);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.85rem}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:.3rem 0 1rem}
+    .lead{color:var(--muted);font-size:1.1rem}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:999px;font-size:.85rem}
+
+    .hero-card{background:radial-gradient(1200px 400px at 10% 10%, rgba(124,92,255,.25), transparent 40%), var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .hero-card img{border-radius:16px}
+
+    /* Floating shapes */
+    .shape{position:absolute;filter:blur(1px);opacity:.25;pointer-events:none}
+    .shape.one{width:220px;height:220px;background:radial-gradient(circle at 30% 30%,var(--brand),transparent 70%);top:-40px;right:-60px;animation:float 10s ease-in-out infinite}
+    .shape.two{width:280px;height:280px;background:radial-gradient(circle at 60% 60%,var(--accent),transparent 70%);bottom:-60px;left:-60px;animation:float 12s ease-in-out infinite reverse}
+    .shape.three{width:140px;height:140px;background:radial-gradient(circle at 50% 50%,var(--pop),transparent 70%);top:35%;left:48%;animation:float 9s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+    /* Section */
+    section{padding:64px 0}
+    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+    .section-title h2{margin:0;font-size:clamp(1.4rem,3.4vw,2rem)}
+    .tag{font-size:.9rem;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.project-card .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card .card img {
+  cursor: pointer; /* show clickable */
+  flex-shrink: 0;
+  width: 100%;
+  height: 200px; /* fixed height for uniformity */
+  object-fit: cover;
+}
+
+.project-card .card .card-body {
+  flex-grow: 1; /* pushes body to fill remaining space */
+}
+
+    /* About */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .list{display:grid;gap:10px;color:var(--muted)}
+    .list strong{color:var(--text)}
+
+    /* Filters */
+    .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+    .filter-btn{COLOR:WHITE;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);cursor:pointer;font-weight:500}
+    .filter-btn.active{background:linear-gradient(135deg,var(--brand),var(--accent));border-color:transparent}
+
+    /* Gallery */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .tile{grid-column:span 4;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;position:relative;transition:transform .25s ease, box-shadow .25s ease}
+    .tile:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+    .tile img{aspect-ratio: 4/3;object-fit:cover}
+    .tile .cap{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px;font-size:.85rem}
+
+.card{
+  color: white;
+}
+    /* Experience timeline */
+    .timeline{position:relative;padding-left:22px}
+    .timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),transparent)}
+    .tl-item{position:relative;margin:18px 0;padding-left:16px}
+    .tl-item::before{content:"";position:absolute;left:-6px;top:6px;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 0 4px rgba(124,92,255,.2)}
+    .tl-role{font-weight:600}
+    .tl-meta{color:var(--muted);font-size:.9rem}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .contact .form input,.contact .form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0c0c0f;color:var(--text)}
+    .contact .form textarea{min-height:120px}
+
+    footer{padding:40px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.08)}
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .grid-hero{grid-template-columns:1fr}
+      .about,.contact{grid-template-columns:1fr}
+      .tile{grid-column:span 6}
+    }
+    @media (max-width: 560px){
+      .nav-menu{display:none}
+      .tile{grid-column:span 12}
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-badge"><span>MU</span></div>
+        <div>
+          <div style="font-weight:800;line-height:1">Mohammad Umer</div>
+          <small style="color:var(--muted);opacity:.9">Graphic Designer</small>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <!-- <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="btn" style="color: white;">Contact</a> -->
+        <a href="https://www.behance.net/mohammadumer7#" target="_blank" rel="noopener" class="btn btn-primary">Behance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="shape one"></div>
+      <div class="shape two"></div>
+      <div class="shape three"></div>
+
+      <div class="container grid-hero">
+        <div>
+          <div class="pill kicker" data-aos="fade-right">Karachi • Remote-friendly</div>
+          <h1 data-aos="fade-right" data-aos-delay="100">Graphic Designer<span id="typed"></span></h1>
+          <p class="lead" data-aos="fade-right" data-aos-delay="200">With 2+ years of experience as a Graphic Designer, I’ve had the chance to sharpen my skills at two US-based multinational companies while also teaming up with 15+ international clients as a freelancer. From bold brand identities to eye-catching visuals, I love bringing ideas to life that not only look great but work great. Designing for me isn’t just a job — it’s my way of storytelling, collaborating, and adding a splash of creativity to brands across the globe.</p>
+          <div style="display:flex;gap:12px;margin-top:18px" data-aos="fade-right" data-aos-delay="280">
+            <a href="#work" class="btn btn-primary">See Projects</a>
+            <a href="#contact" class="btn">Hire Me</a>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:16px;color:var(--muted)" data-aos="fade-right" data-aos-delay="340">
+            <span class="pill">2+ years experience</span>
+            <span class="pill">Branding • Social • Logos</span>
+          </div>
+        </div>
+        <div class="hero-card" data-aos="zoom-in">
+          <img alt="Showcase mockup" src="images/WhatsApp Image 2025-08-19 at 05.16.48.jpeg"/>
+        </div>
+      </div>
+    </section>
+
+   <!-- Work Section -->
+<section id="work"  >
+  <div class="container">
+    <div class="section-title"><h2>Playful, bold & on-brand visuals</h2></div>
+    
+    <div class="filters" role="tablist">
+         <!-- <button class="btn btn-outline-light btn-filter active" onclick="filterProjects('all', this)">All</button> -->
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('social', this)">Social Media Posts</button>
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('logo', this)">Logos</button>
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('thumbnail', this)">Thumbnails</button>
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('product', this)">Product Design</button>
+        <button class="btn btn-outline-light btn-filter" onclick="filterProjects('others', this)">Others</button>     
+    </div>
+
+<div class="row g-4 mt-3" id="project-container" style="color: white;">
+
+
+<!-- social -->
+  <div class="col-md-4 project-card" data-cat="social">
+    <div class="card">
+      <img src="images/social.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Social Media Post</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="social">
+    <div class="card">
+      <img src="images/social4.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Social Media Post</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="social">
+    <div class="card">
+      <img src="images/social8.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Social Media Post</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="social">
+    <div class="card">
+      <img src="images/social1.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Social Media Post</h5></div>
+    </div>
+  </div>
+
+  <div class="col-md-4 project-card" data-cat="social">
+    <div class="card">
+      <img src="images/social2.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Social Media Post</h5></div>
+    </div>
+  </div>
+
+  <div class="col-md-4 project-card" data-cat="social">
+    <div class="card">
+      <img src="images/social6.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Social Media Post</h5></div>
+    </div>
+  </div>
+
+  <div class="col-md-4 project-card" data-cat="social">
+    <div class="card">
+      <img src="images/social7.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Social Media Post</h5></div>
+    </div>
+  </div>
+
+  
+<!-- logo -->
+  <div class="col-md-4 project-card" data-cat="logo">
+    <div class="card">
+      <img src="images/logo.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Logo</h5></div>
+    </div>
+  </div>
+
+    <div class="col-md-4 project-card" data-cat="logo">
+    <div class="card">
+      <img src="images/logo1.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Logo</h5></div>
+    </div>
+  </div>
+
+ <div class="col-md-4 project-card" data-cat="logo">
+    <div class="card">
+      <img src="images/logo4 (2).jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Logo</h5></div>
+    </div>
+  </div>
+
+    <div class="col-md-4 project-card" data-cat="logo">
+    <div class="card">
+      <img src="images/logo2.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Logo</h5></div>
+    </div>
+  </div>
+
+
+    <div class="col-md-4 project-card" data-cat="logo">
+    <div class="card">
+      <img src="images/logo3.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Logo</h5></div>
+    </div>
+  </div>
+
+
+    <div class="col-md-4 project-card" data-cat="logo">
+    <div class="card">
+      <img src="images/logo4 (1).jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Logo</h5></div>
+    </div>
+  </div>
+
+ 
+
+
+
+
+
+
+<!-- thumbnail -->
+  <div class="col-md-4 project-card" data-cat="thumbnail">
+    <div class="card">
+      <img src="images/thum.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Thumbnail</h5></div>
+    </div>
+  </div>
+
+ <div class="col-md-4 project-card" data-cat="thumbnail">
+    <div class="card">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/b89f46232376109.689b2fd886100.jpg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Thumbnail</h5></div>
+    </div>
+  </div>
+
+
+    <div class="col-md-4 project-card" data-cat="thumbnail">
+    <div class="card">
+      <img src="images/thum1.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Thumbnail</h5></div>
+    </div>
+  </div>
+
+
+  <div class="col-md-4 project-card" data-cat="thumbnail">
+    <div class="card">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/72086a232376109.68a2f69e1a3a3.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Thumbnail</h5></div>
+    </div>
+  </div>
+
+
+    <div class="col-md-4 project-card" data-cat="thumbnail">
+    <div class="card">
+      <img src="images/thum2.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Thumbnail</h5></div>
+    </div>
+  </div>
+
+    <div class="col-md-4 project-card" data-cat="thumbnail">
+    <div class="card">
+      <img src="images/thum3.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Thumbnail</h5></div>
+    </div>
+  </div>
+
+     
+
+<!-- product -->
+  <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="images/product.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+   <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="images/product3.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+
+ <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/c7832f228765817.685933954d3ef.png" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+
+    <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="images/product1.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+
+    <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="images/product2.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+
+   
+    <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/bf7715228765817.685933954cc3f.png" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1d840b228765817.685933954c77c.png" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="product">
+    <div class="card">
+      <img src="images/produxt4.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Product Design</h5></div>
+    </div>
+  </div>
+
+
+<!-- others -->
+  <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others1.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others2.jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others3 (1).jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+
+   <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others3 (2).jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+
+  <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others3 (3).jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+  <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others3 (4).jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+  <div class="col-md-4 project-card" data-cat="others">
+    <div class="card">
+      <img src="images/others3 (5).jpeg" class="card-img-top">
+      <div class="card-body"><h5 class="card-title">Others</h5></div>
+    </div>
+  </div>
+
+
+
+
+
+
+ <button class="btn btn-accent btn-show-more" style="color: #f5f7fb; margin-top: 18px;" id="showMoreBtn" onclick="showMore()">Show More</button>
+
+  
+  </div>
+</section>
+
+
+
+  <!-- About
+    <section id="about">
+      <div class="container about">
+        <div class="card" data-aos="fade-right">
+          <div class="section-title"><span class="tag">About</span><h2>Hi, I'm Umer 👋</h2></div>
+          <p class="lead">Graphic Designer with 2+ years crafting logos, social content, and brand assets for clients worldwide. I blend bold type, clean layouts, and story-driven visuals to build memorable brands.</p>
+          <div class="list" style="margin-top:12px">
+            <div><strong>Based:</strong> Karachi, Pakistan</div>
+            <div><strong>Available:</strong> Freelance • Remote • On-site</div>
+            <div><strong>Tools:</strong> Canva (Expert), Adobe Photoshop, PowerPoint</div>
+            <div><strong>Focus:</strong> Branding, Logos, Social Media, Posters & Banners</div>
+          </div>
+        </div>
+        <div class="card" data-aos="fade-left">
+          <div class="section-title"><span class="tag">Quick Links</span><h2>Connect & Profiles</h2></div>
+          <div class="list">
+            <div><strong>Email:</strong> <a href="mailto:m.umersiddiqui2004@gmail.com">m.umersiddiqui2004@gmail.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+923101135955">(+92) 310-1135955</a></div>
+            <div><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/mohammad-umer-siddiqui-b6bb042a9/">/in/mohammad-umer-siddiqui</a></div>
+            <div><strong>Behance:</strong> <a target="_blank" rel="noopener" href="https://www.behance.net/mohammadumer7#">behance.net/mohammadumer7</a></div>
+            <div><strong>Education:</strong> Bachelors in Public Administration — KU</div>
+            <div><strong>Certifications:</strong> Bano Qabil (Graphic Design), Bohradevelopers Bootcamp</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   Experience -->
+    <!-- <section id="experience">
+      <div class="container">
+        <div class="section-title"><span class="tag">Experience</span><h2>Recent Roles</h2></div>
+        <div class="card timeline" data-aos="fade-up">
+          <div class="tl-item">
+            <div class="tl-role">Graphic Designer & Creative Lead — Codellers</div>
+            <div class="tl-meta">Remote • Jun 2025 – Present</div>
+            <div>Leading social media content & branding; managing LinkedIn strategy and execution.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-role">Graphic Designer — The Maddex (US)</div>
+            <div class="tl-meta">Remote • Apr 2025 – Present</div>
+            <div>Designing blog graphics & social posts tailored to US-based client brands.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-role">Junior Graphic Designer — Bohradevelopers</div>
+            <div class="tl-meta">On-site • Nov 2024 – Apr 2025</div>
+            <div>Created social media visuals for 30+ international clients, maintaining brand alignment.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     Contact
+    <section id="contact">
+      <div class="container contact">
+        <div class="card" data-aos="fade-right">
+          <div class="section-title"><span class="tag">Work with me</span><h2>Let’s build something eye-catching</h2></div>
+          <p class="lead">Have a project in mind — a logo, brand identity, or social media campaign? Send a quick message and I’ll reply promptly.</p>
+          <form class="form" onsubmit="sendEmail(event)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <input required placeholder="Your name" id="name"/>
+              <input required type="email" placeholder="Email" id="email"/>
+            </div>
+            <div style="margin:12px 0"><input placeholder="Project type (Logo, Social, Poster...)" id="subject"/></div>
+            <div><textarea required placeholder="Tell me a bit about the project" id="message"></textarea></div>
+            <div style="margin-top:12px"><button class="btn btn-primary" type="submit">Send Message</button></div>
+          </form>
+        </div>
+        <div class="card" data-aos="fade-left">
+          <div class="section-title"><span class="tag">Details</span><h2>Contact</h2></div>
+          <div class="list">
+            <div><strong>Email:</strong> <a href="mailto:m.umersiddiqui2004@gmail.com">m.umersiddiqui2004@gmail.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+923101135955">(+92) 310-1135955</a></div>
+            <div><strong>Location:</strong> Karachi, Pakistan</div>
+            <div><strong>Availability:</strong> Mon–Fri • Remote / On-site</div>
+          </div>
+        </div>
+      </div>
+    </section> --> 
+   
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Mohammad Umer — All rights reserved.</div>
+      <div style="display:flex;gap:12px">
+        <a class="pill" href="https://www.behance.net/mohammadumer7#" target="_blank" rel="noopener">Behance</a>
+        <a class="pill" href="https://www.linkedin.com/in/mohammad-umer-siddiqui-b6bb042a9/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="pill" href="#work">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  AOS.init({ once:true, duration:800 });
+
+  const LIMIT = 9;
+  let currentFilter = 'product'; // Default category
+  let expanded = false;
+
+  function applyVisibility() {
+    const cards = Array.from(document.querySelectorAll('.project-card'));
+    let shown = 0;
+    cards.forEach(card => {
+      const cat = card.getAttribute('data-cat');
+      const match = (currentFilter === 'all') || (cat === currentFilter);
+      if (!match) { 
+        card.style.display = 'none'; 
+        return; 
+      }
+      if (expanded || shown < LIMIT) {
+        card.style.display = 'block'; 
+        shown++;
+      } else { 
+        card.style.display = 'none'; 
+      }
+    });
+
+    const totalMatches = cards.filter(c => currentFilter === 'all' || c.getAttribute('data-cat') === currentFilter).length;
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    if (!showMoreBtn) return;
+    showMoreBtn.style.display = (!expanded && totalMatches > LIMIT) ? 'block' : 'none';
+  }
+
+  function filterProjects(category, btn) {
+    currentFilter = category; 
+    expanded = false;
+
+    document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+    if(btn) btn.classList.add('active');
+
+    applyVisibility();
+  }
+
+  function showMore() { 
+    expanded = true; 
+    applyVisibility(); 
+  }
+
+  document.addEventListener('DOMContentLoaded', () => { 
+    filterProjects('product'); // Show only Product Design initially
+  });
+
+  // Lightbox for images
+  document.querySelectorAll('.project-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      const modal = document.getElementById('lightboxModal');
+      const modalImg = document.getElementById('lightboxImg');
+      modalImg.src = img.src;
+      modal.style.display = 'flex';
+    });
+  });
+
+  document.getElementById('lightboxModal').addEventListener('click', () => {
+    document.getElementById('lightboxModal').style.display = 'none';
+  });
+</script>
+
+  <!-- Lightbox Modal -->
+<div id="lightboxModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);justify-content:center;align-items:center;z-index:9999;">
+  <img id="lightboxImg" src="" style="max-width:90%;max-height:90%;border-radius:12px">
+</div>
+
+<script>
+  // Lightbox open
+  document.querySelectorAll('.project-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      const modal = document.getElementById('lightboxModal');
+      const modalImg = document.getElementById('lightboxImg');
+      modalImg.src = img.src;
+      modal.style.display = 'flex';
+    });
+  });
+
+  // Close on click anywhere
+  document.getElementById('lightboxModal').addEventListener('click', () => {
+    document.getElementById('lightboxModal').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
